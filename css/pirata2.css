@@ -1,0 +1,35 @@
+/*************************************************************/
+/* Web del Romanticismo                                      */
+/* Hoja de estilos de La canción del Pirata - foto de fondo  */
+/* Autora: Pilar González                                    */
+/* versión 1.0                                               */
+/*************************************************************/
+
+/*********** ESTILO GENERAL **********************************/
+
+@font-face {
+    font-family: escritura;
+    src: url('../fonts/BadScript-Regular.ttf');
+}
+
+body {font-family:escritura;
+      font-size:1.2em;
+      color:white;
+      background-image: url('../images/fondo.jpg');
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-color:rgb(13, 13, 13);}
+
+#poema {
+        width:30%;
+        margin-left:60%;
+        padding:20px;
+        border-radius:20px;
+        background-color:rgb(13, 13, 13,0.5);
+        color:white;
+        }
+
+@media only screen and (width<=800px){
+     #poema {width:60%;
+             margin-left:20%;}
+}

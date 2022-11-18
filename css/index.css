@@ -1,0 +1,124 @@
+/************************************************/
+/*  Web del Romanticismo                        */
+/*  Hoja de estilo para  index.html             */
+/*  autora: Pilar González Augusto              */
+/*  versión: 1.0                                */
+/*  11 de Noviembre de 2022                     */
+/************************************************/
+
+/*  ESTILO GENERAL                              */
+
+@font-face {
+    src: url('../fonts/Back\ to\ Black\ Demo.ttf');
+    font-family: titulos;
+   }
+
+@font-face {
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-family: textos;
+   }
+
+* {box-sizing:border-box;}
+
+body {margin:0; padding:0; /* resetear el por defecto de la ventana */
+    
+      font-family:textos;
+      background-color: rgb(156, 107, 107);}
+
+#wrapper {width:80%;
+          background-color: white;
+          margin:auto;}
+
+/*********  HERO SECTION OPCION 1: FOTO + TEXTO ***************************/
+
+#hero {background-image: url('../images/herofoto.jpg');
+       height:100vh;    /* para obligar a que se vea más allá del contenido */
+       background-repeat: no-repeat; /* no la repitas */
+       background-size: cover;           /* cubre todo el fondo */
+       background-position: 33%;      /* fija lo que hay en el medio */
+
+       
+       padding-left:5%; 
+       padding-top:5%;
+
+     }
+
+#titulo {background-color: rgba(255,255,255,0.5);
+         font-family: titulos;
+         font-size: 2.5rem;
+         width:35%;
+         padding:2%;
+         text-align:center;
+         border-radius:20px;
+     }
+
+/***************** HERO 2 : HAIKEI.APP + POSITION + FROSTED GLASS ********/
+
+#hero2 {background-image: url('../images/low-poly-grid-haikei.svg');
+        height:100vh;
+        background-repeat: no-repeat;
+        background-size:cover ;
+
+        position:relative; /* el hero se mueve de sitio */
+}
+
+#titulo2 {font-family:titulos;
+          font-size:3rem;
+          background-color: rgba(255, 255, 255, 0.25);
+          width:50%;
+          text-align:center;  /* podía haber sido un padding */
+
+          /* estas cuatro reglas colocan una caja en medio de otra */
+          position: absolute; /* se fija DENTRO de hero */
+          top:50%;
+          left:50%;
+          transform:translate(-50%,-50%); 
+
+          /* para el efecto frosted glass (fondo debe ser blanco
+                 y con opacidad por debajo de 0.5)               */
+
+          backdrop-filter: blur(3px);
+          
+
+}
+
+/************ HERO 3 : COLOR LISO + GETWAVES *********************/
+
+#hero3 { background-color: #e7008a; /* mismo color que la ola */
+         height:40vh;
+         
+         position:relative;
+}
+
+#titulo3 {font-family: titulos;
+          font-size: 4rem;
+          color:white;
+
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+
+}
+
+
+
+
+
+
+
+/***************** HERO 3 : VIDEO  ***************************************/
+
+
+/**************     MEDIA QUERIES ****************************************/
+
+@media only screen and (width<= 1000px){
+     #wrapper {width:90%;}
+     #titulo {font-size:2rem;
+              width:45%;}
+}
+
+@media only screen and (width<=600px){
+     #wrapper {width:100%;}
+
+}

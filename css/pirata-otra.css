@@ -1,0 +1,61 @@
+/*************************************************************/
+/* Web del Romanticismo                                      */
+/* Hoja de estilos de La canción del Pirata - foto de fondo  */
+/* Autora: Pilar González                                    */
+/* versión 2.0                                               */
+/*************************************************************/
+
+/*********** ESTILO GENERAL **********************************/
+
+@font-face {
+    font-family: escritura;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+/* HOJA DE ESTILO NUEVA, PERO TODO LO DE ARRIBA, IGUAL QUE LA ANTERIOR,
+   COPIAR Y PEGAR DE LA ANTERIOR HOJA DE ESTILO */
+
+body {font-family:escritura;
+      /* COSAS NUEVAS DE HOY */
+      /* 1-vamos a colocar una foto sola de fondo */
+      background-image: url('../images/fondo.jpg');
+      /* 2- para que no se repita */
+      background-repeat: no-repeat;
+      /* 3- para que cubra todo el fondo de la página sin huecos */
+      background-size: cover;
+      /* 4- para que cubra todo el alto del fondo (100vh=100% del alto) */
+      height:120vh; 
+}
+
+/* 5- me llevo el poema a la zona clara de la foto para que haga buen
+   contraste, pero tengo que ajustar en la media query de más abajo para
+   que al contraer la pantalla, se siga contrastando bien */
+
+#poema {margin-left: 60%;}
+
+/* ESTO ES EL ESTILO DE LOS ICONOS DE FONT AWESOME, LO ÚLTIMO QUE HEMOS HECHO */
+
+/* para cambiar el tamaño de todos los iconos, uso .fa */
+.fa {font-size:300% !important;}
+
+/* para colorear uno solo, el de facebook, uso la otra clase */
+.fa-facebook-square {color:#3B5998;}
+
+a {text-decoration:none;
+    color:orange;}
+ 
+ /* pseudoclase como selector  :hover  (ratón encima) */
+ 
+ a:hover {color:orangered;}
+ 
+
+/**************** MEDIA QUERIES ********************/
+
+@media only screen and (width<=800px){
+    /* cuando la pantalla es estrecha, el poema choca con el barco negro 
+       así que debo cambiar el color del texto y el margin-left, sino
+       queda poco espacio para visualizarlo */
+     #poema {color:white;
+             margin-left:20%;
+             }
+}
